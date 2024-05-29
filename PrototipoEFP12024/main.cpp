@@ -100,6 +100,8 @@ void catalogos()
         case 1:
         {
             //implementacion de empleados
+            empleado empleados;
+            empleados.menu();
         }
             break;
         case 2:
