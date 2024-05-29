@@ -1,0 +1,70 @@
+# depslib dependency file v1.0
+1716999811 source:c:\users\admi\onedrive\documentos\carpeta para git\examenfinal\prototipoefp12024\src\bitacora.cpp
+	"Bitacora.h"
+	<iostream>
+	<fstream>
+	<conio.h>
+	<ctime>
+	<stdlib.h>
+	<iomanip>
+
+1716999811 c:\users\admi\onedrive\documentos\carpeta para git\examenfinal\prototipoefp12024\include\bitacora.h
+	<iostream>
+
+1716999339 source:c:\users\admi\onedrive\documentos\carpeta para git\examenfinal\prototipoefp12024\src\empleado.cpp
+	"empleado.h"
+
+1716999339 c:\users\admi\onedrive\documentos\carpeta para git\examenfinal\prototipoefp12024\include\empleado.h
+
+1716999729 source:c:\users\admi\onedrive\documentos\carpeta para git\examenfinal\prototipoefp12024\src\login.cpp
+	"Login.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	"Bitacora.h"
+
+1716999729 c:\users\admi\onedrive\documentos\carpeta para git\examenfinal\prototipoefp12024\include\login.h
+	<iostream>
+	<fstream>
+	<string>
+
+1716999281 source:c:\users\admi\onedrive\documentos\carpeta para git\examenfinal\prototipoefp12024\src\usualumnos.cpp
+	<iostream>
+	<fstream>
+	<iomanip>
+
+1716999019 source:c:\users\admi\onedrive\documentos\carpeta para git\examenfinal\prototipoefp12024\src\usuarios.cpp
+	"usuarios.h"
+	"usualumnos.h"
+	<fstream>
+	<cstdlib>
+	<conio.h>
+	<iostream>
+	"usumaestros.h"
+
+1716999811 c:\users\admi\onedrive\documentos\carpeta para git\examenfinal\prototipoefp12024\include\usuarios.h
+	<iostream>
+
+1716999281 c:\users\admi\onedrive\documentos\carpeta para git\examenfinal\prototipoefp12024\include\usualumnos.h
+	<iostream>
+
+1716999281 c:\users\admi\onedrive\documentos\carpeta para git\examenfinal\prototipoefp12024\include\usumaestros.h
+	<iostream>
+
+1716999281 source:c:\users\admi\onedrive\documentos\carpeta para git\examenfinal\prototipoefp12024\src\usumaestros.cpp
+	<iostream>
+	<fstream>
+	<iomanip>
+
+1716999795 source:c:\users\admi\onedrive\documentos\carpeta para git\examenfinal\prototipoefp12024\main.cpp
+	<iostream>
+	<cstdlib>
+	<conio.h>
+	"usuarios.h"
+	"Login.h"
+	"Bitacora.h"
+	"empleado.h"
+

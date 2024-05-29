@@ -5,27 +5,13 @@
 #include "Login.h"
 #include "Bitacora.h"
 
-#include "alumnos.h"
-#include "maestros.h"
-#include "Carrera.h"
-#include "Facultad.h"
-#include "Cursoss.h"
-#include "jornada.h"
-#include "aulas.h"
-#include "secciones.h"
-#include "Sedes.h"
-#include "Horarios.h"
-
-#include "matricula.h"
-#include "Inscripcion.h"
-#include "colegiatura.h"
-#include "sueldos.h"
+#include "empleado.h"
 
 using namespace std;
 
 void menuGeneral();
+void catalogos();
 void informes();
-void procesos();
 void seguridad();
 string codigoPrograma="1";
 Bitacora Auditoria;
@@ -101,20 +87,10 @@ void catalogos()
         cout << "\t\t\t--------------------------------------------" << endl;
         cout << "\t\t\t|   SISTEMA DE GESTION UMG - CATALOGOS      |" << endl;
         cout << "\t\t\t--------------------------------------------" << endl;
-        cout << "\t\t\t 1. Alumnos" << endl;
-        cout << "\t\t\t 2. Maestros" << endl;
-        cout << "\t\t\t 3. Usuarios del sistema" << endl;
-        cout << "\t\t\t 4. Carreras" << endl;
-        cout << "\t\t\t 5. Facultades" << endl;
-        cout << "\t\t\t 6. Cursos" << endl;
-        cout << "\t\t\t 7. Jornadas" << endl;
-        cout << "\t\t\t 8. Aulas" << endl;
-        cout << "\t\t\t 9. Secciones" << endl;
-        cout << "\t\t\t 10. Sedes" << endl;
-        cout << "\t\t\t 11. Horarios" << endl;
-        cout << "\t\t\t 12. Retornar menu anterior" << endl;
+        cout << "\t\t\t 1. Empleados" << endl;
+        cout << "\t\t\t 2. Retornar menu anterior" << endl;
         cout << "\t\t\t --------------------------------------------" << endl;
-        cout << "\t\t\t | Opcion a escoger:[1-12]|" << endl;
+        cout << "\t\t\t | Opcion a escoger:[1/2]|" << endl;
         cout << "\t\t\t --------------------------------------------" << endl;
         cout << "\t\t\tIngresa tu Opcion: ";
         cin >> choice;
@@ -123,71 +99,10 @@ void catalogos()
         {
         case 1:
         {
-            alumnos alumno;
-            alumno.menu();
+            //implementacion de empleados
         }
             break;
         case 2:
-        {
-            maestros maestro;
-            maestro.menu();
-        }
-            break;
-        case 3:
-        {
-            usuarios usuario;
-            usuario.menuUsuarios();
-            break;
-        }
-        case 4:
-        {
-            CarrerasCRUD carrera;
-            carrera.Crudcarrera();
-        }
-            break;
-        case 5:
-        {
-            FacultadCRUD facultad;
-            facultad.Crudfacultad();
-        }
-            break;
-        case 6:
-        {
-            CursosCRUD cursos;
-            cursos.CrudCursos();
-        }
-            break;
-        case 7:
-        {
-            JornadaCRUD jornada;
-            jornada.CrudJornada();
-        }
-            break;
-        case 8:
-        {
-            AulasCRUD aulas;
-            aulas.CrudAula();
-        }
-            break;
-        case 9:
-        {
-            SeccionesCrud secciones;
-            secciones.CrudSeccion();
-        }
-            break;
-        case 10:
-        {
-            Sedes sede;
-            sede.menu();
-        }
-            break;
-        case 11:
-        {
-            Horarios horarios;
-            horarios.menu();
-        }
-            break;
-        case 12:
             menuGeneral();
             break;
         default:
@@ -195,7 +110,7 @@ void catalogos()
             cin.ignore();
             cin.get();
         }
-    } while (choice != 12);
+    } while (choice != 2);
 }
 
 void informes()
@@ -209,13 +124,10 @@ void informes()
         cout << "\t\t\t--------------------------------------------" << endl;
         cout << "\t\t\t|   SISTEMA DE GESTION UMG - PROCESOS      |" << endl;
         cout << "\t\t\t--------------------------------------------" << endl;
-        cout << "\t\t\t 1. Matricula" << endl;
-        cout << "\t\t\t 2. Inscripcion" << endl;
-        cout << "\t\t\t 3. Colegiatura" << endl;
-        cout << "\t\t\t 4. Sueldos" << endl;
-        cout << "\t\t\t 5. Retornar menu anterior" << endl;
+        cout << "\t\t\t 1. Implesion de archivo txt" << endl;
+        cout << "\t\t\t 2. Retornar menu anterior" << endl;
         cout << "\t\t\t --------------------------------------------" << endl;
-        cout << "\t\t\t | Opcion a escoger:[1-5]|" << endl;
+        cout << "\t\t\t | Opcion a escoger:[1/2]|" << endl;
         cout << "\t\t\t --------------------------------------------" << endl;
         cout << "\t\t\tIngresa tu Opcion: ";
         cin >> choice;
@@ -224,29 +136,10 @@ void informes()
         {
         case 1:
         {
-            matricula matricula;
-            matricula.menu();
+            //Implementación de inpresion
         }
             break;
         case 2:
-        {
-            Inscripcion inscripcion;
-            inscripcion.leerDatos();
-        }
-            break;
-        case 3:
-        {
-            colegiatura colegiatura;
-            colegiatura.leerDatos();
-        }
-            break;
-        case 4:
-        {
-            sueldos sueldos;
-            sueldos.menu();
-        }
-            break;
-        case 5:
             menuGeneral();
             break;
         default:
@@ -254,17 +147,7 @@ void informes()
             cin.ignore();
             cin.get();
         }
-    } while (choice != 5);
-}
-
-void reportes()
-{
-    // Implementación de reportes
-}
-
-void ayuda()
-{
-    // Implementación de ayuda
+    } while (choice != 2);
 }
 
 void seguridad()
