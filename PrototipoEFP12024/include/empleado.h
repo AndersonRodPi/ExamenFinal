@@ -13,7 +13,7 @@ class empleado
         char codigo_puesto[5];
         char codigo_departamento[5];
         char sueldo_empleado[20];
-        char status_empleado[1];
+        char status_empleado[5];
 	public:
 		void menu();
 		void insertar();

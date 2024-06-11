@@ -1,13 +1,13 @@
-#include "Login.h"
 #include<iostream>
 #include<fstream>
 #include<stdlib.h>
 #include<cstdlib>
 #include<conio.h>
 #include<iomanip>
+#include "Login.h"
 #include "Bitacora.h"
-using namespace std;
 
+using namespace std;
 
 Login::Login(string usuario, string contrasena)//parametros de la clase
 {
@@ -78,15 +78,15 @@ bool Login::VerificarUsuario()
         }
 
     //abrira el archivo de User y contraseñas--------------------------
-    ifstream fileU_P;
-    fileU_P.open("usuarios_y_contrasenas prueba.txt",ios::in);
+    ifstream fileU;
+    fileU.open("usuarios.txt",ios::in);
 
 
     //verificar si se abrio el archivo---------------------------
-    if (!fileU_P)
+    if (!fileU)
     {
         cout<<"\n\t\t\t No es posible abrir el archivo."<<endl;
-        fileU_P.close();
+        fileU.close();
         return false;
     }
     string codigoPrograma="1000";
@@ -94,7 +94,7 @@ bool Login::VerificarUsuario()
 
     //busca el usuario en el archivo---------------------------------
     string user,pass;
-    while (fileU_P>>user>>pass)
+    while (fileU>>user>>pass)
     {
         if (user==usuario && pass==contrasena)
         {
@@ -103,7 +103,7 @@ bool Login::VerificarUsuario()
             break;
         }
     }
-     fileU_P.close();
+     fileU.close();
 
     //si no encuentra user y pass , el contador incrementara------------------------
     if(!encontrado)
@@ -133,9 +133,4 @@ bool Login::VerificarUsuario()
 
     return false;
     }
-
-
-
-
-
 }

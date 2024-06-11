@@ -1,6 +1,4 @@
 //Programa que permite insertar, desplegar, modificar y borrar empleados
-#include "empleado.h" // Incluye el archivo de cabecera Sedes.h que contiene la declaración de la clase Sedes
-#include "usuarios.h"
 #include<iostream> // Incluye la biblioteca estándar para entrada y salida
 #include<fstream> // Incluye la biblioteca para manejo de archivos
 #include<stdlib.h> // Incluye la biblioteca estándar para funciones de utilidad
@@ -8,6 +6,7 @@
 #include<iomanip> // Incluye la biblioteca para manipulación de la salida
 #include <sstream> // Incluye la biblioteca para operaciones de flujo de cadena
 #include <cstring> // Incluye la biblioteca para operaciones de cadena
+#include "empleado.h" // Incluye el archivo de cabecera Sedes.h que contiene la declaración de la clase Sedes
 #include"Bitacora.h"
 
 using namespace std; // Usa el espacio de nombres estándar
@@ -19,17 +18,35 @@ struct Empleado {
     char codigo_puesto[5];
     char codigo_departamento[5];
     char sueldo_empleado[20];
-    char status_empleado[1];
+    char status_empleado[5];
 };
 
 
-// Definición de las funciones miembro de la clase Sedes
+// Definición de las funciones miembro de la clase
 void empleado::menu()
 {
     //implementacion de variables para bitacora
-    string codigoPrograma = "100";
+    string codigoPrograma = "1100";
     Bitacora Auditoria;
-    string user = "admin";
+    //abrira el archivo de User y contraseñas--------------------------
+    ifstream fileU;
+    fileU.open("usuarios.txt",ios::in);
+
+
+    //verificar si se abrio el archivo---------------------------
+    if (!fileU)
+    {
+        cout<<"\n\t\t\t No es posible abrir el archivo."<<endl;
+        fileU.close();
+    }
+    //busca el usuario en el archivo---------------------------------
+    string user,pass;
+    while (fileU>>user>>pass)
+    {
+        //obtener el nombre de usuario
+    }
+     fileU.close();
+
     int choice; // Variable para almacenar la opción seleccionada por el usuario
     char x; // Variable para almacenar la respuesta de agregar otra sede
 
@@ -40,7 +57,7 @@ void empleado::menu()
 
         // Imprime el encabezado del menú
         cout<<"\t\t\t-----------------------------------------"<<endl;
-        cout<<"\t\t\t| SISTEMA DE GESTION EMPLEADOS -  100  |"<<endl;
+        cout<<"\t\t\t| SISTEMA DE GESTION EMPLEADOS -  1100  |"<<endl;
         cout<<"\t\t\t-----------------------------------------"<<endl;
         cout<<"\t\t\t 1. Ingreso empleados"<<endl;
         cout<<"\t\t\t 2. Despliegue empleados"<<endl;
@@ -104,7 +121,7 @@ void empleado::insertar() {
 
     // Solicita al usuario ingresar los datos de la sede
     cout << "\n--------------------------------------------------------------------------------------------------------------------";
-    cout << "\n-------------------------------------------------Agregar Sede-------------------------------------------------------" << endl;
+    cout << "\n-------------------------------------------------Agregar Empleado---------------------------------------------------" << endl;
     cout << "\t\t\tIngrese codigo del empleado   : ";
     cin.ignore();//limpia el buffer de entrada del flujo de entrada estándar
     cin.getline(empleado.codigo_empleado, sizeof(empleado.codigo_empleado));//guarda el id en la instancia que se creo de la estructura empleado
@@ -144,7 +161,7 @@ void empleado::desplegar(){
         cout << "\t\t\t Nombre de empleado     : " << empleado.nombre_empleado << endl;
         cout << "\t\t\t Codigo de puesto       : " << empleado.codigo_puesto << endl;
         cout << "\t\t\t Codigo de departamento : " << empleado.codigo_departamento << endl;
-        cout << "\t\t\t Sueldo del empleado    : " << empleado.sueldo_empleado << endl;
+        cout << "\t\t\t Sueldo del empleado    : Q" << empleado.sueldo_empleado << endl;
         cout << "\t\t\t Status del empleado    : " << empleado.status_empleado << endl;
         cout << "-----------------------------------------------------------------------------------------------------------------" << endl;
         total++; // Incrementa el contador de sedes

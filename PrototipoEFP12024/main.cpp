@@ -1,26 +1,26 @@
 #include <iostream>
 #include <cstdlib>
 #include <conio.h>
-#include "usuarios.h"
 #include "Login.h"
 #include "Bitacora.h"
 
 #include "empleado.h"
+#include "informes.h"
 
 using namespace std;
 
 void menuGeneral();
 void catalogos();
-void informes();
+void Informes();
 void seguridad();
 string codigoPrograma="1";
 Bitacora Auditoria;
-string user, contrasena;
+string usuario, contrasena;
 
 int main()
 {
         // Llamamos al objeto e ingresamos los parametros
-    Login ingreso(user, contrasena);
+    Login ingreso(usuario, contrasena);
 
     // Creamos un bool que verifique y despliegue el metodo VerificarUsuario
     bool UsuarioCorrecto = ingreso.VerificarUsuario();
@@ -36,6 +36,24 @@ int main()
 
 void menuGeneral()
 {
+    //abrira el archivo de User y contraseñas--------------------------
+    ifstream fileU;
+    fileU.open("usuarios.txt",ios::in);
+
+
+    //verificar si se abrio el archivo---------------------------
+    if (!fileU)
+    {
+        cout<<"\n\t\t\t No es posible abrir el archivo."<<endl;
+        fileU.close();
+    }
+    //busca el usuario en el archivo---------------------------------
+    string user,pass;
+    while (fileU>>user>>pass)
+    {
+        //obtener el nombre de usuario
+    }
+     fileU.close();
     int choice;
 
 
@@ -43,7 +61,7 @@ void menuGeneral()
     {
         system("cls");
         cout << "\t\t\t-------------------------------" << endl;
-        cout << "\t\t\t|   SISTEMA DE GESTION UMG     |" << endl;
+        cout << "\t\t\t| SISTEMA DE GESTION EMPLEADOS |" << endl;
         cout << "\t\t\t-------------------------------" << endl;
         cout << "\t\t\t 1. Catalogos" << endl;
         cout << "\t\t\t 2. Informes" << endl;
@@ -61,7 +79,7 @@ void menuGeneral()
             catalogos();
             break;
         case 2:
-            informes();
+            Informes();
             break;
         case 3:
             seguridad();
@@ -85,7 +103,7 @@ void catalogos()
     {
         system("cls");
         cout << "\t\t\t--------------------------------------------" << endl;
-        cout << "\t\t\t|   SISTEMA DE GESTION UMG - CATALOGOS      |" << endl;
+        cout << "\t\t\t| SISTEMA DE GESTION EMPLEADOS - CATALOGOS |" << endl;
         cout << "\t\t\t--------------------------------------------" << endl;
         cout << "\t\t\t 1. Empleados" << endl;
         cout << "\t\t\t 2. Retornar menu anterior" << endl;
@@ -115,16 +133,16 @@ void catalogos()
     } while (choice != 2);
 }
 
-void informes()
+void Informes()
 {
-    // Implementación de procesos
+    // Implementación de informes
     int choice;
 
     do
     {
         system("cls");
         cout << "\t\t\t--------------------------------------------" << endl;
-        cout << "\t\t\t|   SISTEMA DE GESTION UMG - PROCESOS      |" << endl;
+        cout << "\t\t\t| SISTEMA DE IMPRESION DE EMPLEADOS - 1200 |" << endl;
         cout << "\t\t\t--------------------------------------------" << endl;
         cout << "\t\t\t 1. Implesion de archivo txt" << endl;
         cout << "\t\t\t 2. Retornar menu anterior" << endl;
@@ -139,6 +157,8 @@ void informes()
         case 1:
         {
             //Implementación de inpresion
+            informes informe;
+            informe.imprimirArchivo();
         }
             break;
         case 2:
@@ -154,7 +174,37 @@ void informes()
 
 void seguridad()
 {
-    // Implementación de seguridad
-    Bitacora Auditoria;
-    Auditoria.visualizarBitacora();
+    int choice;
+
+    do
+    {
+        system("cls");
+        cout << "\t\t\t--------------------------------------------" << endl;
+        cout << "\t\t\t|   SISTEMA DE GESTION UMG - PROCESOS      |" << endl;
+        cout << "\t\t\t--------------------------------------------" << endl;
+        cout << "\t\t\t 1. Consultar bitacora" << endl;
+        cout << "\t\t\t 2. Retornar menu anterior" << endl;
+        cout << "\t\t\t --------------------------------------------" << endl;
+        cout << "\t\t\t | Opcion a escoger:[1/2]|" << endl;
+        cout << "\t\t\t --------------------------------------------" << endl;
+        cout << "\t\t\tIngresa tu Opcion: ";
+        cin >> choice;
+
+        switch (choice)
+        {
+        case 1:
+        {
+            Bitacora Auditoria;
+            Auditoria.visualizarBitacora();
+        }
+            break;
+        case 2:
+            menuGeneral();
+            break;
+        default:
+            cout << "\n\t\t\t Opcion invalida...Por favor prueba otra vez..";
+            cin.ignore();
+            cin.get();
+        }
+    } while (choice != 2);
 }

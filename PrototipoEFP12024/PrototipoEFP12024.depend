@@ -1,19 +1,17 @@
 # depslib dependency file v1.0
-1716999811 source:c:\users\admi\onedrive\documentos\carpeta para git\examenfinal\prototipoefp12024\src\bitacora.cpp
-	"Bitacora.h"
+1718058228 source:c:\users\admi\onedrive\documentos\carpeta para git\examenfinal\prototipoefp12024\src\bitacora.cpp
 	<iostream>
 	<fstream>
 	<conio.h>
 	<ctime>
 	<stdlib.h>
 	<iomanip>
+	"Bitacora.h"
 
-1716999811 c:\users\admi\onedrive\documentos\carpeta para git\examenfinal\prototipoefp12024\include\bitacora.h
+1718058059 c:\users\admi\onedrive\documentos\carpeta para git\examenfinal\prototipoefp12024\include\bitacora.h
 	<iostream>
 
-1717002394 source:c:\users\admi\onedrive\documentos\carpeta para git\examenfinal\prototipoefp12024\src\empleado.cpp
-	"empleado.h"
-	"usuarios.h"
+1718119680 source:c:\users\admi\onedrive\documentos\carpeta para git\examenfinal\prototipoefp12024\src\empleado.cpp
 	<iostream>
 	<fstream>
 	<stdlib.h>
@@ -21,22 +19,23 @@
 	<iomanip>
 	<sstream>
 	<cstring>
+	"empleado.h"
 	"Bitacora.h"
 
-1717002394 c:\users\admi\onedrive\documentos\carpeta para git\examenfinal\prototipoefp12024\include\empleado.h
+1718048754 c:\users\admi\onedrive\documentos\carpeta para git\examenfinal\prototipoefp12024\include\empleado.h
 	<iostream>
 
-1717000052 source:c:\users\admi\onedrive\documentos\carpeta para git\examenfinal\prototipoefp12024\src\login.cpp
-	"Login.h"
+1718058419 source:c:\users\admi\onedrive\documentos\carpeta para git\examenfinal\prototipoefp12024\src\login.cpp
 	<iostream>
 	<fstream>
 	<stdlib.h>
 	<cstdlib>
 	<conio.h>
 	<iomanip>
+	"Login.h"
 	"Bitacora.h"
 
-1717000052 c:\users\admi\onedrive\documentos\carpeta para git\examenfinal\prototipoefp12024\include\login.h
+1718041277 c:\users\admi\onedrive\documentos\carpeta para git\examenfinal\prototipoefp12024\include\login.h
 	<iostream>
 	<fstream>
 	<string>
@@ -55,8 +54,10 @@
 	<iostream>
 	"usumaestros.h"
 
-1716999811 c:\users\admi\onedrive\documentos\carpeta para git\examenfinal\prototipoefp12024\include\usuarios.h
+1718041077 c:\users\admi\onedrive\documentos\carpeta para git\examenfinal\prototipoefp12024\include\usuarios.h
 	<iostream>
+	<fstream>
+	<string>
 
 1717000052 c:\users\admi\onedrive\documentos\carpeta para git\examenfinal\prototipoefp12024\include\usualumnos.h
 	<iostream>
@@ -69,12 +70,27 @@
 	<fstream>
 	<iomanip>
 
-1717000052 source:c:\users\admi\onedrive\documentos\carpeta para git\examenfinal\prototipoefp12024\main.cpp
+1718080716 source:c:\users\admi\onedrive\documentos\carpeta para git\examenfinal\prototipoefp12024\main.cpp
 	<iostream>
 	<cstdlib>
 	<conio.h>
-	"usuarios.h"
 	"Login.h"
 	"Bitacora.h"
 	"empleado.h"
+	"informes.h"
+
+1718123762 source:c:\users\admi\onedrive\documentos\carpeta para git\examenfinal\prototipoefp12024\src\informes.cpp
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<iomanip>
+	<sstream>
+	<cstring>
+	"informes.h"
+	"empleado.h"
+	"Bitacora.h"
+
+1718119490 c:\users\admi\onedrive\documentos\carpeta para git\examenfinal\prototipoefp12024\include\informes.h
+	<iostream>
 

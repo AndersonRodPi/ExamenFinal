@@ -7,11 +7,11 @@ using namespace std;
 class Bitacora
 {
     public:
-        void ingresoBitacora(string nombre, string aplicacion, string accion);
+        void ingresoBitacora(string nombre, string numAccion, string accion);
         void visualizarBitacora();
 
     private:
-        string nombre, accion, aplicacion;
+        string nombre, accion, numAccion;
 		char* date_time;
 };
 

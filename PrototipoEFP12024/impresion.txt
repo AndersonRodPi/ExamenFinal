@@ -1,0 +1,15 @@
+-----------------------------------------Tabla Detalles de empleados ----------------------------------------------
+			 Codigo de empleado     : 1
+			 Nombre de empleado     : Juan Alberto Perez Molina
+			 Codigo de puesto       : 1
+			 Codigo de departamento : 2
+			 Sueldo del empleado    : Q1000
+			 Status del empleado    : 0
+-----------------------------------------------------------------------------------------------------------------
+			 Codigo de empleado     : 10
+			 Nombre de empleado     : Luis Miguel Perez
+			 Codigo de puesto       : 100
+			 Codigo de departamento : 10
+			 Sueldo del empleado    : Q5000
+			 Status del empleado    : 1
+-----------------------------------------------------------------------------------------------------------------
